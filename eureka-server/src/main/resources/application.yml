@@ -1,0 +1,12 @@
+server:
+  port: 8761
+eureka:
+  datacenter: trmap
+  environment: product
+  client:
+    healthcheck:
+      enabled: true
+    service-url:
+      defaultZone: http://root:1234abcd@localhost:8761/eureka
+    register-with-eureka: false #关闭自己作为客户端注册
+    fetch-registry: false
