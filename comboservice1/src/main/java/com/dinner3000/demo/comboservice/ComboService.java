@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class ComboService {
     @Autowired
-    RestTemplate restTemplate;
+    private RestTemplate restTemplate;
 
     @HystrixCommand(fallbackMethod = "fallback")
     public Object doubleCall() throws Exception {

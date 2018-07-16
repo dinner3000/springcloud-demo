@@ -16,6 +16,7 @@
         <module>service1</module>
         <module>service2</module>
         <module>comboservice1</module>
+		<module>comboservice2</module>
     </modules>
 
 </project>

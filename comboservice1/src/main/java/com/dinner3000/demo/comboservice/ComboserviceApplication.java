@@ -23,15 +23,15 @@ public class ComboserviceApplication {
 
     @Bean
     @LoadBalanced
-    RestTemplate restTemplate() {
+    public RestTemplate restTemplate() {
         return new RestTemplate();
     }
 
     @Autowired
-    ComboService comboService;
+    private ComboService comboService;
 
 	@RequestMapping("/service")
-	public Object comboService1() throws Exception {
+	public Object service() throws Exception {
 	    return comboService.doubleCall();
 	}
 
