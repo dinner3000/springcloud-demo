@@ -19,6 +19,7 @@ public class ComboService {
 //    @HystrixCommand(fallbackMethod = "fallback")
     public Object doubleCall(){
         List<String> resultList = new ArrayList<>();
+        resultList.add("Feign based: ");
         resultList.add(service1.service());
         resultList.add(service2.service());
         return org.apache.commons.lang.StringUtils.join(resultList, " | ");

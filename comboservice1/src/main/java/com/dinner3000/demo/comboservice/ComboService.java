@@ -17,6 +17,7 @@ public class ComboService {
     public Object doubleCall() throws Exception {
         List<String> resultList = new ArrayList<>();
 //        throw new Exception("Expecting error");
+        resultList.add("RestTemplate based: ");
         resultList.add(restTemplate.getForObject("http://service1/service", String.class));
         resultList.add(restTemplate.getForObject("http://service2/service", String.class));
         return org.apache.commons.lang.StringUtils.join(resultList, " | ");
