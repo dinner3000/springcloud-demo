@@ -7,3 +7,9 @@ server:
 spring:
   application:
     name: comboservice1
+management:
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: "*"
