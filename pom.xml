@@ -17,6 +17,8 @@
         <module>service2</module>
         <module>comboservice1</module>
 		<module>comboservice2</module>
+		<module>configserver</module>
+		<module>zuul</module>
     </modules>
 
 </project>
