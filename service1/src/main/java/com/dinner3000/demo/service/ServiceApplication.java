@@ -24,6 +24,16 @@ public class ServiceApplication {
 
 	@RequestMapping("/service")
 	public Object service(){
-        return String.format("service at %s.%s", appName, serverPort);
+        return String.format("service at %s:%s => name: %s, age: %s, version: %s",
+				appName, serverPort, name, age, version);
     }
+
+	@Value("${name}")
+	private  String name;
+
+	@Value("${age}")
+	private  String age;
+
+	@Value("${version}")
+	private  String version;
 }
